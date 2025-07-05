@@ -1,0 +1,20 @@
+| Alias WinAPI   | Sous‑alias | Taille 32 bits | Taille 64 bits | Type C « pur » ¹                       | Rôle habituel                             |
+| -------------- | ---------- | -------------- | -------------- | -------------------------------------- | ----------------------------------------- |
+| **BOOL**       | –          | 4 o            | 4 o            | `int`                                  | Valeur booléenne (`TRUE`/`FALSE`)         |
+| **BYTE**       | –          | 1 o            | 1 o            | `unsigned char`                        | Octet                                     |
+| **WORD**       | –          | 2 o            | 2 o            | `unsigned short`                       | 16 bits                                   |
+| **DWORD**      | –          | 4 o            | 4 o            | `unsigned long`                        | 32 bits, codes/flags                      |
+| **LONG**       | –          | 4 o            | 4 o            | `long`                                 | 32 bits signé                             |
+| **UINT**       | –          | 4 o            | 4 o            | `unsigned int`                         | 32 bits non signé                         |
+| **ULONG\_PTR** | –          | 4 o            | 8 o            | `unsigned long` / `unsigned long long` | Entier pointeur non signé                 |
+| **LONG\_PTR**  | –          | 4 o            | 8 o            | `long` / `long long`                   | Entier pointeur signé                     |
+| **SIZE\_T**    | –          | 4 o            | 8 o            | `size_t`                               | Tailles mémoire                           |
+| **WPARAM**     | `UINT_PTR` | 4 o            | 8 o            | `uintptr_t`                            | Param. « mot » d’un message               |
+| **LPARAM**     | `LONG_PTR` | 4 o            | 8 o            | `intptr_t`                             | Param. « double‑mot » d’un message        |
+| **LRESULT**    | `LONG_PTR` | 4 o            | 8 o            | `intptr_t`                             | Valeur de retour d’une proc. fenêtre/hook |
+| **HANDLE**     | –          | 4 o            | 8 o            | `void *`                               | Handle générique (fichier, mutex…)        |
+| **HINSTANCE**  | `HANDLE`   | 4 o            | 8 o            | `void *`                               | Instance de module                        |
+| **LPVOID**     | –          | 4 o            | 8 o            | `void *`                               | Pointeur générique                        |
+| **LPCSTR**     | –          | 4 o            | 8 o            | `const char *`                         | Chaîne ANSI const                         |
+| **LPCWSTR**    | –          | 4 o            | 8 o            | `const wchar_t *`                      | Chaîne UTF‑16 const                       |
+| **TCHAR** ²    | –          | 1 o ou 2 o     | 1 o ou 2 o     | `char` / `wchar_t`                     | Caractère dépendant d’UNICODE             |
