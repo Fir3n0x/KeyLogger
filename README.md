@@ -1,4 +1,4 @@
-# 🔑 KeyLogger (Windows ‑ Educational)
+# KeyLogger (Windows ‑ Educational)
 
 > **Disclaimer ▸** This project is **for educational and research purposes only**.  
 > Running key‑logging software on a computer that you do not own **or** without explicit permission is **illegal** in most jurisdictions.  
