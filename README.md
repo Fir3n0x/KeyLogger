@@ -35,7 +35,7 @@ A small Python helper script (**`read_keylog.py`**) is included to translate tho
 
 | Platform           | Compiler        | Notes                                     |
 | ------------------ | --------------- | ----------------------------------------- |
-| **Windows 7 → 11** | GCC **or** MSVC | 64‑bit recommended, but 32‑bit works too. |
+| **Windows 7 → 11** | GCC             | 64‑bit recommended, but 32‑bit works too. |
 
 ### I don’t have `gcc` on Windows 🤔
 
