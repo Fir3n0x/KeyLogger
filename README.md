@@ -54,7 +54,7 @@ gcc keyLogger.c -o keylogger.exe -mwindows
 
 # …or keep the console for debugging
 gcc keyLogger.c -o keylogger.exe
-
+```
 
 ---
 
@@ -81,7 +81,7 @@ VK: 0x43 (67)
 ...
 ```
 
-Running python read_keylog.py :
+Running <code>python read_keylog.py</code> :
 
 ```bash
 `A` (65)
