@@ -90,6 +90,14 @@ Running <code>python read_keylog.py</code> :
 Message : `A``B``C`
 ```
 
+---
+
+## License
+
+This project is released under a MIT License.
+
+---
+
 ## Author
 
 **Corentin Mahieu** – [@Fir3n0x](https://github.com/Fir3n0x)
